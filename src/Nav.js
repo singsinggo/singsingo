@@ -50,7 +50,7 @@ const Nav = () => {
         <li>
           <Link to="/foodadd" end="/foodadd" className={`${NavStyle.navItem}`}>
             <img
-              src={path + "./images/nav_add.svg"}
+              src={path + "/images/nav_add.svg"}
               alt="푸드리스트"
               className={NavStyle.addBtn}
             />
