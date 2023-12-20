@@ -69,7 +69,7 @@ const Food = () => {
   return (
     <div className={styles.foodContainer}>
       <Link to="/">
-        <img src="/images/food_back.svg" alt="뒤로가기" className={styles.back} />
+        <img src="/images/backBtn.svg" alt="뒤로가기" className={styles.back} />
       </Link>
       <h2 className={styles.title}>보관 중인 식재료</h2>
       <input
@@ -152,7 +152,7 @@ const Food = () => {
       {isModalOpen && (
         <div className={styles.modal}>
           <div className={styles.modalBox}>
-            <img src="/images/food_back_blue.svg" alt="뒤로가기" className={styles.back} onClick={closeModal} />
+            <img src="/images/backBtn.svg" alt="뒤로가기" className={styles.back} onClick={closeModal} />
             <h2>싱싱고 수정하기</h2>
             <label>
               <select
