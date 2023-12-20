@@ -67,10 +67,7 @@ const ShoppingInput = ({ onAdd, onReset, path }) => {
           className={ShoppingStyle.listAdd}
         />
         <button type="submit" className={ShoppingStyle.addBtn}>
-          <img
-            src={path + "./images/shoppingList_add.svg"}
-            alt="플러스아이콘"
-          />
+          <img src={path + "/images/shoppingList_add.svg"} alt="플러스아이콘" />
         </button>
       </form>
       <button onClick={handleReset} className={ShoppingStyle.allDelBtn}>

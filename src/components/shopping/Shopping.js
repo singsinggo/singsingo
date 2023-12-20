@@ -53,7 +53,7 @@ const Shopping = () => {
       <div className={ShoppingStyle.shopBg}>
         <div className={ShoppingStyle.bgWrap}>
           <img
-            src={path + "./images/magnet3.svg"}
+            src={path + "/images/magnet3.svg"}
             alt="마그넷 세개"
             className={ShoppingStyle.magnetImg}
           />

@@ -17,7 +17,7 @@ const LinkBanner = ({ path }) => {
           target="_blank"
           className={ShoppingStyle.linkBanner}>
           <img
-            src={path + "./images/logo_coupang.svg"}
+            src={path + "/images/logo_coupang.svg"}
             alt="플러스아이콘"
             className={ShoppingStyle.bannerIcon}
           />
@@ -27,7 +27,7 @@ const LinkBanner = ({ path }) => {
           target="_blank"
           className={ShoppingStyle.linkBanner}>
           <img
-            src={path + "./images/logo_kurly.svg"}
+            src={path + "/images/logo_kurly.svg"}
             alt="플러스아이콘"
             className={ShoppingStyle.bannerIcon}
           />
@@ -37,7 +37,7 @@ const LinkBanner = ({ path }) => {
           target="_blank"
           className={ShoppingStyle.linkBanner}>
           <img
-            src={path + "./images/logo_ssg.svg"}
+            src={path + "/images/logo_ssg.svg"}
             alt="플러스아이콘"
             className={ShoppingStyle.bannerIcon}
           />

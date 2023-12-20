@@ -80,7 +80,7 @@ const Food = () => {
     <div className={styles.foodContainer}>
       <Link to="/">
         <img
-          src="/images/food_back.svg"
+          src={path + "/images/food_back.svg"}
           alt="뒤로가기"
           className={styles.back}
         />
@@ -155,7 +155,7 @@ const Food = () => {
                       className={styles.foodItem}
                       onClick={() => openModal(food, index)}>
                       <img
-                        src={categoryIMG[food.category]}
+                        src={path + categoryIMG[food.category]}
                         alt={food.category}
                       />
                       <p className={styles.place}>{food.category}</p>
