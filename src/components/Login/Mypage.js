@@ -29,11 +29,11 @@ const Mypage = () => {
     <div className={MypageStyle.myPageWrap}>
       <div className={MypageStyle.headerBg}>
         <Link to="/fridge" className={MypageStyle.backBtn}>
-          <img src={path + "./images/food_back_blue.svg"} />
+          <img src={path + "/images/food_back_blue.svg"} />
         </Link>
         <h2>마이페이지</h2>
         <div className={MypageStyle.profileWrap}>
-          <img src={path + "./images/myPage_profile.svg"} />
+          <img src={path + "/images/myPage_profile.svg"} />
           <h3>
             {username}님,
             <br /> 안녕하세요 :)
@@ -42,16 +42,16 @@ const Mypage = () => {
       </div>
       <div className={MypageStyle.linkWrap}>
         <Link to="/shopping" className={MypageStyle.shoppingLink}>
-          <img src={path + "./images/myPage_shopping.svg"} />
+          <img src={path + "/images/myPage_shopping.svg"} />
           <p>나의 장바구니로 이동하기</p>
         </Link>
         <Link to="/date" className={MypageStyle.calendaLink}>
-          <img src={path + "./images/myPage_calenda.svg"} />
+          <img src={path + "/images/myPage_calenda.svg"} />
           <p>나의 달력으로 이동하기</p>
         </Link>
         <div className="logoutWrapper">
           <button className={MypageStyle.logOutBtn} onClick={handleLogout}>
-            <img src={path + "./images/myPage_logout.svg"} />
+            <img src={path + "/images//myPage_logout.svg"} />
             <p>로그아웃</p>
           </button>
         </div>

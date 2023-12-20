@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import interactionPlugin from '@fullcalendar/interaction';
-import FullCalendar from '@fullcalendar/react';
-import styles from './Calendar.module.css';
-import './calendar.css';
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import interactionPlugin from "@fullcalendar/interaction";
+import FullCalendar from "@fullcalendar/react";
+import styles from "./Calendar.module.css";
+import "./calendar.css";
 
 const Calendar = () => {
   const location = useLocation();
@@ -13,13 +13,8 @@ const Calendar = () => {
   const [events, setEvents] = useState([]);
   const [selectedDate, setSelectedDate] = useState(null);
 
-  const isExpiring = (dDay) => {
-    const days = parseInt(dDay.replace('D-', ''), 10);
-    return days <= 3 && days >= 0;
-  };
-
   useEffect(() => {
-    const savedList = localStorage.getItem('foodList');
+    const savedList = localStorage.getItem("foodList");
     const foodList = savedList ? JSON.parse(savedList) : [];
 
     // FullCalendar에서 사용할 이벤트 배열 생성
@@ -43,14 +38,16 @@ const Calendar = () => {
   }, []);
 
   const handleDayClick = (arg) => {
-    const selectedEvents = events.filter((event) => event.start === arg.dateStr);
+    const selectedEvents = events.filter(
+      (event) => event.start === arg.dateStr
+    );
     setSelectedDate(selectedEvents);
   };
 
   const categoryIMG = {
-    냉장: '/images/category_fridge.svg',
-    냉동: '/images/category_freezer.svg',
-    실온: '/images/category_room.svg',
+    냉장: "/images/category_fridge.svg",
+    냉동: "/images/category_freezer.svg",
+    실온: "/images/category_room.svg",
   };
 
   return (
@@ -63,9 +60,9 @@ const Calendar = () => {
             initialView="dayGridMonth"
             events={events}
             headerToolbar={{
-              left: 'prev',
-              center: 'title',
-              right: 'next',
+              left: "prev",
+              center: "title",
+              right: "next",
             }}
             dateClick={handleDayClick}
             height={400}
@@ -73,21 +70,28 @@ const Calendar = () => {
         </div>
         {selectedDate && selectedDate.length > 0 ? (
           <div className={styles.listBox}>
+            {/* <h2 className={styles.underDate}>{`${selectedDate[0].start}`}</h2> */}
             <ul>
               {selectedDate.map((event, index) => (
                 <li key={index} className={styles.itemBox}>
                   <p className={styles.category}>
-                    <img src={categoryIMG[event.category]} alt={event.category} />
+                    <img
+                      src={categoryIMG[event.category]}
+                      alt={event.category}
+                    />
                     {`${event.category}`}
                   </p>
                   <div className={styles.textBox}>
                     <p className={styles.name}>
                       {`${event.title}`}({`${event.quantity}`})
                     </p>
-                    <p className={styles.endDay}>{`소비기한: ${event.endDay}`}</p>
+                    <p
+                      className={
+                        styles.endDay
+                      }>{`소비기한: ${event.endDay}`}</p>
                   </div>
 
-                  <p className={isExpiring(event.dDay) ? styles.dDayExpiring : styles.dDay}>{` ${event.dDay}`}</p>
+                  <p className={styles.dDay}>{` ${event.dDay}`}</p>
                 </li>
               ))}
             </ul>
@@ -95,7 +99,11 @@ const Calendar = () => {
         ) : (
           <div className={styles.emptyBox}>
             <h2 className={styles.empty}>
-              <img src="images/shopping_list.svg" alt="카테고리" className={styles.emptyImg} />
+              <img
+                src={path + "/images/shopping_list.svg"}
+                alt="food-category-img"
+                className={styles.emptyImg}
+              />
             </h2>
           </div>
         )}
