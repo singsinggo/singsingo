@@ -95,7 +95,7 @@ const Calendar = () => {
         ) : (
           <div className={styles.emptyBox}>
             <h2 className={styles.empty}>
-              <img src="/images/shopping_list.svg" alt="" className={styles.emptyImg} />
+              <img src="images/shopping_list.svg" alt="카테고리" className={styles.emptyImg} />
             </h2>
           </div>
         )}
