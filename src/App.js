@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-import "./App.css";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import Login from "./components/Login/Login";
-import SignUp from "./components/Login/SignUp";
-import { UserProvider } from "./components/Login/UserContext";
-import StorageSelect from "./components/storage/StorageSelect";
-import StorageAdd from "./components/storage/StorageAdd";
-import StorageEdit from "./components/storage/StorageEdit";
-import Splash from "./components/Login/Splash";
-import Mypage from "./components/Login/Mypage";
-import LocationList from "./components/home/LocationList";
-import Shopping from "./components/shopping/Shopping";
-import Food from "./components/food/Food";
-import Nav from "./Nav";
-import Calender from "./components/calender/Calendar";
-import FoodAdd from "./components/food/FoodAdd";
+import React, { useState } from 'react';
+import './App.css';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Login from './components/Login/Login';
+import SignUp from './components/Login/SignUp';
+import { UserProvider } from './components/Login/UserContext';
+import StorageSelect from './components/storage/StorageSelect';
+import StorageAdd from './components/storage/StorageAdd';
+import StorageEdit from './components/storage/StorageEdit';
+import Splash from './components/Login/Splash';
+import Mypage from './components/Login/Mypage';
+import LocationList from './components/home/LocationList';
+import Shopping from './components/shopping/Shopping';
+import Food from './components/food/Food';
+import Nav from './Nav';
+import Calender from './components/calender/Calendar';
+import FoodAdd from './components/food/FoodAdd';
 
 const App = () => {
   // 데이터 관리
@@ -43,7 +43,7 @@ const App = () => {
   return (
     <div className="screenSize">
       <UserProvider>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path="/" element={<Splash />} />
             <Route path="/login" element={<Login />} />
@@ -97,11 +97,7 @@ const App = () => {
               path="/date"
               element={
                 <div className="componentWrap">
-                  <Calender
-                    foodList={foodList}
-                    setFoodList={setFoodList}
-                    purchaseEvents={purchaseEvents || []}
-                  />
+                  <Calender foodList={foodList} setFoodList={setFoodList} purchaseEvents={purchaseEvents || []} />
                   <Nav setFoodList={setFoodList} />
                 </div>
               }
