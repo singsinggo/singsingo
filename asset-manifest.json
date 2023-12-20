@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/singsingo/static/css/main.3660cf29.css",
-    "main.js": "/singsingo/static/js/main.4f1a70cf.js",
+    "main.js": "/singsingo/static/js/main.3381e73c.js",
     "static/media/memo_green.svg": "/singsingo/static/media/memo_green.0931193258bb18b5c48d.svg",
     "index.html": "/singsingo/index.html",
     "static/media/search.svg": "/singsingo/static/media/search.5fe1787759cddf4eaf26.svg",
@@ -12,10 +12,10 @@
     "static/media/fridge_memo3.svg": "/singsingo/static/media/fridge_memo3.5d8cd4676da22025ebbd.svg",
     "static/media/fridge_memo2.svg": "/singsingo/static/media/fridge_memo2.93276aa147d92afc00fd.svg",
     "main.3660cf29.css.map": "/singsingo/static/css/main.3660cf29.css.map",
-    "main.4f1a70cf.js.map": "/singsingo/static/js/main.4f1a70cf.js.map"
+    "main.3381e73c.js.map": "/singsingo/static/js/main.3381e73c.js.map"
   },
   "entrypoints": [
     "static/css/main.3660cf29.css",
-    "static/js/main.4f1a70cf.js"
+    "static/js/main.3381e73c.js"
   ]
 }
