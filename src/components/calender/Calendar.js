@@ -77,7 +77,7 @@ const Calendar = () => {
                 <li key={index} className={styles.itemBox}>
                   <p className={styles.category}>
                     <img
-                      src={categoryIMG[event.category]}
+                      src={path + categoryIMG[event.category]}
                       alt={event.category}
                     />
                     {`${event.category}`}
