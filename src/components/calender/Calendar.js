@@ -7,6 +7,7 @@ import styles from "./Calendar.module.css";
 import "./calendar.css";
 
 const Calendar = () => {
+  const path = process.env.PUBLIC_URL;
   const location = useLocation();
   const { purchaseDate } = location.state || {};
 
