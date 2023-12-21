@@ -110,6 +110,7 @@
 }
 .foodItem .textBox p {
   margin: 0;
+  line-height: 0.8;
 }
 .foodItem h4 {
   font-size: 1.3rem;
@@ -135,7 +136,9 @@
 .foodItem .DDay {
   font-size: 1.1rem;
   display: grid;
-  place-items: strach;
+  justify-items: end;
+  align-items: strach;
+  /* place-items: end; */
   grid-column: 3/4;
   grid-row: 2/5;
   margin-top: 5px;
