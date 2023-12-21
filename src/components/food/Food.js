@@ -116,11 +116,9 @@ const Food = () => {
         <div className={styles.itemWrap}>
           {foodList.length === 0 ? (
             <div className={styles.emptyWrapper}>
-              <h2 className={styles.emptyMemoFirst}>저장된 식재료가 없어요.</h2>
+              <h2 className={styles.emptyMemoFirst}>저장된 식재료가 없어요</h2>
               <p className={styles.emptyMemoSecond}>식재료 저장을 원한다면</p>
-              <p className={styles.emptyMemoThird}>
-                하단 추가 메뉴를 클릭하세요 :)
-              </p>
+              <p className={styles.emptyMemoThird}>하단 추가 메뉴를 클릭 :)</p>
             </div>
           ) : (
             sortedFoodList

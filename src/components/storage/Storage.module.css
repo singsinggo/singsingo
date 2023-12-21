@@ -100,9 +100,10 @@
     cover;
   width: 200px;
   height: 40px;
-  line-height: 60px;
+  line-height: 3;
   padding: 10px;
-  text-align: center;
+  padding-left: 20px;
+  text-align: left;
   position: absolute;
   top: 400px;
   left: 70%;
